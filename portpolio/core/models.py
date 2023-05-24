@@ -62,4 +62,20 @@ class Service(models.Model):
     class Meta:
         db_table = "service"
 
+class Testimonial(models.Model):
+    name = models.CharField(max_length=70,verbose_name="Name ")
+    profile = models.CharField(max_length=50, verbose_name="profile ")
+    desc = models.TextField(max_length=500, verbose_name="Description ")
+    image = models.ImageField(upload_to="testimonial", verbose_name="Image ")
 
+    class Meta:
+        db_table = "testimonial"
+
+# class Contact(models.Model):
+#     name = models.CharField(max_length=70,verbose_name="Customer Name")
+#     email = models.EmailField(max_length=70, verbose_name="Customer email")
+#     subject = models.CharField(max_length=70, verbose_name="Subject")
+#     meesage = models.TextField(max_length=500, verbose_name="meesage")
+
+#     class Meta:
+#         db_table ="contact"
