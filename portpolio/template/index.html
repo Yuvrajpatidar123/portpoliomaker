@@ -407,7 +407,10 @@
                     </div>
 
                     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form action="#" method="post" role="form" class="php-email-form">
+                        <form style="width: 100%;
+                        padding: 30px;
+                        background: #fff;
+                        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);" action="{% url 'contactuspage'%}" method="post">{% csrf_token %}
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Your Name</label>
@@ -424,14 +427,18 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Message</label>
-                                <textarea class="form-control" name="message" rows="10" required></textarea>
+                                <textarea type="text" class="form-control" name="message" rows="10" required></textarea>
                             </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                            <div class="text-center">
+                                <button type="submit" style="background: #149ddd;
+                                border: 0;
+                                margin: 10px;
+                                padding: 10px 24px;
+                                color: #fff;
+                                transition: 0.4s;
+                                border-radius: 4px;">Send Message</button>
                             </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
                         </form>
                     </div>
 
@@ -445,20 +452,20 @@
     <!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <footer id="footer">
+    <!-- <footer id="footer">
         <div class="container">
             <div class="copyright">
                 &copy; Copyright <strong><span>iPortfolio</span></strong>
             </div>
             <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-        </div>
-    </footer>
+                 All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+    <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </footer> -->
     <!-- End  Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

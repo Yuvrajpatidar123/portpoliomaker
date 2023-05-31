@@ -71,11 +71,13 @@ class Testimonial(models.Model):
     class Meta:
         db_table = "testimonial"
 
-# class Contact(models.Model):
-#     name = models.CharField(max_length=70,verbose_name="Customer Name")
-#     email = models.EmailField(max_length=70, verbose_name="Customer email")
-#     subject = models.CharField(max_length=70, verbose_name="Subject")
-#     meesage = models.TextField(max_length=500, verbose_name="meesage")
+class Contactus(models.Model):
+    name = models.CharField(max_length=70)
+    email = models.EmailField(max_length=70)
+    subject = models.TextField(max_length=55)
+    message = models.TextField(max_length=500)
 
-#     class Meta:
-#         db_table ="contact"
+    class Meta:
+        db_table = "contact"
+
+
